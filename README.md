@@ -1,2 +1,3 @@
-# cruddable
-Map your entities to create a JavaScript/TypeScript CRUD easily
+# OOOP
+
+Over-engineered object oriented programming
