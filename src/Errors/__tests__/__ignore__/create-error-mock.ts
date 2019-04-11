@@ -28,8 +28,8 @@ export default function createErrorMock(ErrorConstructor: ConstructorOf<Error>) 
         value: jest.fn().mockReturnValue('a'),
       };
       
-      expect(() => ErrorConstructor['create'](mocked, mocked)).not.toThrowError();
-      expect(ErrorConstructor['create'](mocked, mocked).name).toBe(new ErrorConstructor().name);
+      expect(() => (ErrorConstructor as any)['create'](mocked, mocked)).not.toThrowError();
+      expect((ErrorConstructor as any)['create'](mocked, mocked).name).toBe(new ErrorConstructor().name);
     });
   });
 }

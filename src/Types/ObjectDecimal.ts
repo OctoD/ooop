@@ -11,7 +11,7 @@ export default class ObjectDecimal extends TypeBase<number> {
       throw new InvalidCastError(`Implicit conversion from ${Object.prototype.toString.call(arg)} to ${this.name()}`);
     }
 
-    this['underlyingValue'] = arg;
+    this['underlyingValue'] = parseFloat(parseFloat(<any> arg).toFixed(2));
   }
   
   public cast<T extends TypeBase<unknown>>(type: T): ObjectDecimal {

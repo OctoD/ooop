@@ -5,6 +5,25 @@ import TypeBase from './TypeBase';
 
 export default class ObjectChar extends TypeBase<string> {
   /**
+   * Creates an instance of ObjectChar.
+   * @param {string} char
+   * @memberof ObjectChar
+   */
+  public constructor(char: string | number) {
+    super(TypeBase.skipToken);
+
+    if (typeof char === "number") {
+      this['underlyingValue'] = String.fromCharCode(char);
+    } else if (typeof char === 'string' && char === TypeBase.skipToken) {
+      this['underlyingValue'] = 'a';
+    } else if (typeof char === 'string' && char !== TypeBase.skipToken && char.length === 1) {
+      this['underlyingValue'] = char;
+    } else {
+      throw new InvalidCastError(`Implicit conversion from ${Object.prototype.toString.call(char)} ${this.name()}`);
+    }
+  }
+  
+  /**
    * @template T
    * @param {T} type
    * @returns {string}

@@ -1,6 +1,10 @@
 import TypeBase from './TypeBase';
 
 export default class ObjectVoid extends TypeBase<void> {
+  public constructor() {
+    super(<any> TypeBase.skipToken);
+  }
+  
   public cast<T extends TypeBase<unknown>>(type: T): TypeBase<void> {
     return new ObjectVoid();
   }  

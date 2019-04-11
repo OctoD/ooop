@@ -6,8 +6,8 @@ export default class ObjectUndefined extends TypeBase<undefined> {
     this['underlyingValue'] = undefined;
   }
   
-  public cast<T extends TypeBase<unknown>>(type: T): undefined {
-    return undefined;
+  public cast<T extends TypeBase<unknown>>(type: T): ObjectUndefined {
+    return new ObjectUndefined();
   }  
   
   public name(): string {

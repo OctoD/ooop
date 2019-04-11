@@ -1,4 +1,4 @@
-import { ObjectInt, ObjectString, ObjectVoid } from '../types';
+import { ObjectInt, ObjectString, ObjectVoid, ObjectNull } from '../types';
 import { ConstructorOf } from './ConstructorOf';
 import TypeBase from './TypeBase';
 
@@ -65,6 +65,22 @@ export default class ObjectArray<Z extends TypeBase> extends TypeBase<Z[]> {
   }
 
   /**
+   *
+   * @param {ObjectInt} position
+   * @returns {(Z | ObjectNull)}
+   * @memberof ObjectArray
+   */
+  public item(position: ObjectInt): Z | ObjectNull {
+    const value = this[position.value()];
+
+    if (value === undefined) {
+      return new ObjectNull();
+    }
+
+    return value as Z;
+  }
+
+  /**
    * @returns {ObjectInt}
    * @memberof ObjectArray
    */
@@ -96,6 +112,8 @@ export default class ObjectArray<Z extends TypeBase> extends TypeBase<Z[]> {
     const el = this[this.size - 1];
 
     delete this[this.size - 1];
+
+    this.size = this.size - 1;
     
     return el as Z;
   }

@@ -1,4 +1,5 @@
 import InvalidCastError from '../Errors/InvalidCastError';
+import { ObjectVoid } from '../types';
 
 export default abstract class TypeBase<TUnderlyingType = unknown> {
   /**
@@ -6,7 +7,7 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
    * @type {TUnderlyingType}
    * @memberof TypeBase
    */
-  private underlyingValue: TUnderlyingType;
+  private underlyingValue!: TUnderlyingType;
 
   /**
    * @static
@@ -69,12 +70,11 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
    * @returns {TUnderlyingType}
    * @memberof TypeBase
    */
-  public value(value?: TypeBase<unknown>): typeof value extends unknown ? TUnderlyingType : void {
+  public value(value?: TypeBase<unknown>): TUnderlyingType {
     if (!!value) {
-      this.underlyingValue = this.cast(value).value();
-      return;
+      this.underlyingValue = this.cast(value).value() as any;
     }
     
-    return this.underlyingValue;
+    return this.underlyingValue as any;
   };
 }
