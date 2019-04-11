@@ -42,11 +42,11 @@ export default class ObjectArray<Z extends TypeBase> extends TypeBase<Z[]> {
 
   /**
    * @template T
-   * @param {T} type
+   * @param {T} _type
    * @returns {ObjectArray<Z>}
    * @memberof ObjectArray
    */
-  public cast<T extends TypeBase<unknown>>(type: T): ObjectArray<Z> {
+  public cast<T extends TypeBase<unknown>>(_type: T): ObjectArray<Z> {
     throw new Error('Method not implemented.');
   }
 

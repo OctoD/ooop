@@ -1,5 +1,5 @@
 import InvalidCastError from '../Errors/InvalidCastError';
-import { ObjectVoid } from '../types';
+import { ConstructorOf } from './ConstructorOf';
 
 export default abstract class TypeBase<TUnderlyingType = unknown> {
   /**
@@ -15,6 +15,11 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
    */
   public static skipToken = '---invalidate';
 
+  /**
+   * Creates an instance of TypeBase.
+   * @param {TUnderlyingType} value
+   * @memberof TypeBase
+   */
   public constructor(value: TUnderlyingType) {
     const uncastedType = Object.prototype.toString.call(value);
     const ownedType = this.name();
@@ -26,6 +31,29 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
     } else if (<any>value !== TypeBase.skipToken) {
       throw new InvalidCastError(`Cannot convert ${uncastedType} to ${ownedType}`);
     }
+  }
+
+  /**
+   * @protected
+   * @param {unknown} arg
+   * @returns {string}
+   * @memberof TypeBase
+   */
+  protected getUnderlyingTypeOf(arg: unknown): string {
+    return Object.prototype.toString.call(arg);
+  }
+
+  /**
+   * @static
+   * @template TType
+   * @template TArg
+   * @param {ConstructorOf<TType>} Type
+   * @param {TArg} arg
+   * @returns {TType}
+   * @memberof TypeBase
+   */
+  public static create<TType extends TypeBase<TArg>, TArg>(Type: ConstructorOf<TType>, arg: TArg): TType {
+    return new Type(arg);
   }
   
   /**
