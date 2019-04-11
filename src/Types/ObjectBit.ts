@@ -2,8 +2,19 @@ import ObjectBoolean from './ObjectBoolean';
 import ObjectNull from './ObjectNull';
 import ObjectUndefined from './ObjectUndefined';
 import TypeBase from './TypeBase';
+import InvalidCastError from '../Errors/InvalidCastError';
 
-export default class ObjectBit extends TypeBase<number> {
+export default class ObjectBit extends TypeBase<0 | 1> {
+  public constructor(bit: 0 | 1) {
+    super(<any> TypeBase.skipToken);
+
+    if (<any> bit !== TypeBase.skipToken && typeof bit !== 'number' && typeof bit !== 'boolean') {
+      throw new InvalidCastError(`Cannot convert ${Object.prototype.toString.call(bit)} to ${this.name()}`);
+    }
+
+    this['underlyingValue'] = !!bit ? 1 : 0;
+  }
+  
   public cast<T extends TypeBase<unknown>>(type: T): ObjectBit {
     if (type.nullable() && type.value() === null) {
       return new ObjectBit(0);

@@ -14,7 +14,7 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
    */
   public static skipToken = '---invalidate';
 
-  public constructor(value?: TUnderlyingType) {
+  public constructor(value: TUnderlyingType) {
     const uncastedType = Object.prototype.toString.call(value);
     const ownedType = this.name();
     
@@ -22,7 +22,7 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
       throw new InvalidCastError(`Undefined argument in ${this.name()}`);
     } else if (<any>value !== TypeBase.skipToken && uncastedType === ownedType) {
       this.underlyingValue = value;
-    } else {
+    } else if (<any>value !== TypeBase.skipToken) {
       throw new InvalidCastError(`Cannot convert ${uncastedType} to ${ownedType}`);
     }
   }

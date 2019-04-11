@@ -24,13 +24,15 @@ export default class ObjectObject extends TypeBase<object> {
       throw InvalidCastError.create(new ObjectNull(), this);
     }
 
-    if (typeof value !== 'object') {
+    if (typeof value !== 'object' && value !== TypeBase.skipToken) {
       throw new TypeError(`Invalid argument`);
     }
 
-    Object.keys(value).forEach(key => {
-      this[key] = value;
-    });
+    if (Object.prototype.toString.call(value) === this.name()) {
+      Object.keys(value as object).forEach(key => {
+        this[key] = value;
+      });
+    }
   }
   
   /**

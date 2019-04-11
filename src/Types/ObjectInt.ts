@@ -1,8 +1,19 @@
 import ObjectNull from './ObjectNull';
 import TypeBase from './TypeBase';
 import ObjectUndefined from './ObjectUndefined';
+import InvalidCastError from '../Errors/InvalidCastError';
 
 export default class ObjectInt extends TypeBase<number> {
+  public constructor(arg: number) {
+    super(<any> TypeBase.skipToken);
+
+    if (typeof arg !== 'number' && arg !== TypeBase.skipToken) {
+      throw new InvalidCastError(`Implicit conversion from ${Object.prototype.toString.call(arg)} to ${this.name()}`);
+    }
+
+    this['underlyingValue'] = arg;
+  }
+  
   public cast<T extends TypeBase<unknown>>(type: T): ObjectInt {
     if (type.nullable() && type.value() === null) {
       return new ObjectInt(0);

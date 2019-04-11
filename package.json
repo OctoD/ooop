@@ -4,19 +4,24 @@
   "description": "Over-engineered object oriented programming",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OctoD/cruddable.git"
+    "url": "git+https://github.com/OctoD/ooop.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OctoD/cruddable/issues"
+  "author": {
+    "email": "iamoctod@gmail.com",
+    "name": "Paolo Roth",
+    "url": "https://www.iamoctod.com"
   },
-  "homepage": "https://github.com/OctoD/cruddable#readme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OctoD/ooop/issues"
+  },
+  "homepage": "https://github.com/OctoD/ooop#readme",
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "jest": "^24.7.1",
