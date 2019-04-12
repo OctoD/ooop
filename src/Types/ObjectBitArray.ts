@@ -9,4 +9,4 @@ export default class ObjectBitArray extends ObjectArray<ObjectBit> {
   public name() {
     return `[object BitArray]`;
   }
-}
+} 

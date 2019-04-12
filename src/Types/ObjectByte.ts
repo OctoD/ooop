@@ -118,10 +118,10 @@ export default class ObjectByte extends TypeBase<number> {
     let bitArray = [] as number[];
 
     for (let i = 0; i < 8; i++) {
-      bitArray.push(this.item(new ObjectInt(i)).value());
+      bitArray.push((this.item(new ObjectInt(i)).value()));
     }
     
-    return new ObjectInt(this['underlyingValue']);
+    return new ObjectInt(parseInt(bitArray.join(''), 2));
   }
 
   /**

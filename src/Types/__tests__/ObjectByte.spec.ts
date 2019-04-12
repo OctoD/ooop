@@ -10,7 +10,7 @@ describe(ObjectByte.name, () => {
   basetests.hasValue(ObjectByte);
   basetests.isNullable(ObjectByte, false);
 
-  test(ObjectByte.prototype.item.name, () => {
+  test(`ObjectByte.prototype.item`, () => {
     const byte = new ObjectByte(0);
 
     expect(byte.item(new ObjectInt(0)).value()).toBe(0);
@@ -23,15 +23,15 @@ describe(ObjectByte.name, () => {
     expect(byte.item(new ObjectInt(7)).value()).toBe(0);
   });
 
-  test(ObjectByte.prototype.toBitArray.name, () => {
+  test(`ObjectByte.prototype.toBitArray`, () => {
     expect(new ObjectByte(0).toBitArray().equalsTo(ObjectBitArray)).toBeTruthy();
   });
 
-  test(ObjectByte.prototype.toInt.name, () => {
+  test(`ObjectByte.prototype.toInt`, () => {
     expect(new ObjectByte(0).toInt().equalsTo(ObjectInt)).toBeTruthy();
   });
 
-  test(ObjectByte.prototype.value.name, () => {
+  test(`ObjectByte.prototype.value`, () => {
     const byte = new ObjectByte(0);
 
     expect(byte.value()).toBe(0);
