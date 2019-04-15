@@ -1,4 +1,4 @@
-import Divide from '../Divide';
+import Divide from '../Math/Divide';
 import ObjectFloat from '../../Types/ObjectFloat';
 import { mathOperatorBase, mathOperatorBaseThrow } from './__ignore__/create-operator-test';
 import { ObjectString } from '../../types';

@@ -1,4 +1,4 @@
-import Multiply from '../Multiply';
+import Multiply from '../Math/Multiply';
 import ObjectFloat from '../../Types/ObjectFloat';
 import { mathOperatorBase, mathOperatorBaseThrow } from './__ignore__/create-operator-test';
 import { ObjectString } from '../../types';

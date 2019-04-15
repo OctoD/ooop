@@ -1,6 +1,6 @@
-import OperatorBase from './OperatorBase';
-import ObjectFloat from '../Types/ObjectFloat';
-import OperationError from '../Errors/OperationError';
+import OperatorBase from '../OperatorBase';
+import ObjectFloat from '../../Types/ObjectFloat';
+import OperationError from '../../Errors/OperationError';
 
 export default class Subtract extends OperatorBase<ObjectFloat, ObjectFloat> {
   /**

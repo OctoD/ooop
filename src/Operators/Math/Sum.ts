@@ -1,6 +1,6 @@
-import OperationError from '../Errors/OperationError';
-import ObjectFloat from '../Types/ObjectFloat';
-import OperatorBase from './OperatorBase';
+import OperationError from '../../Errors/OperationError';
+import ObjectFloat from '../../Types/ObjectFloat';
+import OperatorBase from '../OperatorBase';
 
 export default class Sum extends OperatorBase<ObjectFloat, ObjectFloat> {
   /**
