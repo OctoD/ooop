@@ -12,6 +12,7 @@ import ObjectNull from './Types/ObjectNull';
 import ObjectObject from './Types/ObjectObject';
 import ObjectString from './Types/ObjectString';
 import ObjectUndefined from './Types/ObjectUndefined';
+import ObjectVariable from './Types/ObjectVariable';
 import ObjectVoid from './Types/ObjectVoid';
 import TypeBase from './Types/TypeBase';
 
@@ -30,6 +31,7 @@ export {
   ObjectObject,
   ObjectString,
   ObjectUndefined,
+  ObjectVariable,
   ObjectVoid,
   TypeBase,
 }

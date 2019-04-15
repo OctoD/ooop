@@ -74,6 +74,15 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
   }
 
   /**
+   * @abstract
+   * @returns {ConstructorOf<this>}
+   * @memberof TypeBase
+   */
+  public getType(): ConstructorOf<TypeBase> {
+    return this.constructor.prototype.constructor;
+  };
+
+  /**
    * @memberof TypeBase
    */
   public abstract name(): string;

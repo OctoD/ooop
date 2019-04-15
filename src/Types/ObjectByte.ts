@@ -1,18 +1,21 @@
-import { TypeBase, ObjectNull, ObjectBit, ObjectInt } from '../types';
 import OutOfRangeError from '../Errors/OutOfRangeError';
 import InvalidCastError from '../Errors/InvalidCastError';
 import ObjectBitArray from './ObjectBitArray';
+import ObjectBit from './ObjectBit';
+import TypeBase from './TypeBase';
+import ObjectInt from './ObjectInt';
+import ObjectNull from './ObjectNull';
 
 export default class ObjectByte extends TypeBase<number> {
-  protected readonly bit0: ObjectBit = new ObjectBit(0);
-  protected readonly bit1: ObjectBit = new ObjectBit(0);
-  protected readonly bit2: ObjectBit = new ObjectBit(0);
-  protected readonly bit3: ObjectBit = new ObjectBit(0);
-  protected readonly bit4: ObjectBit = new ObjectBit(0);
-  protected readonly bit5: ObjectBit = new ObjectBit(0);
-  protected readonly bit6: ObjectBit = new ObjectBit(0);
-  protected readonly bit7: ObjectBit = new ObjectBit(0);
-  protected readonly bit8: ObjectBit = new ObjectBit(0);
+  protected readonly bit0: ObjectBit;
+  protected readonly bit1: ObjectBit;
+  protected readonly bit2: ObjectBit;
+  protected readonly bit3: ObjectBit;
+  protected readonly bit4: ObjectBit;
+  protected readonly bit5: ObjectBit;
+  protected readonly bit6: ObjectBit;
+  protected readonly bit7: ObjectBit;
+  protected readonly bit8: ObjectBit;
 
   /**
    * Creates an instance of ObjectByte.
@@ -35,6 +38,15 @@ export default class ObjectByte extends TypeBase<number> {
     }
 
     this['underlyingValue'] = arg;
+    this.bit0 = new ObjectBit(0);
+    this.bit1 = new ObjectBit(0);
+    this.bit2 = new ObjectBit(0);
+    this.bit3 = new ObjectBit(0);
+    this.bit4 = new ObjectBit(0);
+    this.bit5 = new ObjectBit(0);
+    this.bit6 = new ObjectBit(0);
+    this.bit7 = new ObjectBit(0);
+    this.bit8 = new ObjectBit(0);
 
     const bitLike = arg.toString(2);
 

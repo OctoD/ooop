@@ -1,7 +1,7 @@
 import Multiply from '../../Math/Multiply';
 import ObjectFloat from '../../../Types/ObjectFloat';
 import { mathOperatorBase, mathOperatorBaseThrow } from '../__ignore__/create-operator-test';
-import { ObjectString } from '../../../types';
+import ObjectString from '../../../Types/ObjectString';
 
 describe(`Multiply`, () => {
   test(`Works as a division`, () => {

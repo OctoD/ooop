@@ -1,6 +1,8 @@
-import { TypeBase, ObjectVoid, ObjectBoolean } from '../types';
 import { ConstructorOf } from '../Types/ConstructorOf';
 import InvalidLeftOperatorType from '../Errors/InvalidLeftOperatorType';
+import TypeBase from '../Types/TypeBase';
+import ObjectVoid from '../Types/ObjectVoid';
+import ObjectBoolean from '../Types/ObjectBoolean';
 
 export default abstract class OperatorBase<LeftType extends TypeBase, RightType extends TypeBase> {
   /**

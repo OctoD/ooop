@@ -1,7 +1,9 @@
-import { ObjectInt, ObjectString, ObjectVoid, ObjectNull } from '../types';
 import { ConstructorOf } from './ConstructorOf';
 import TypeBase from './TypeBase';
 import ObjectFunction from './ObjectFunction';
+import ObjectVoid from './ObjectVoid';
+import ObjectInt from './ObjectInt';
+import ObjectNull from './ObjectNull';
 
 /**
  * @export

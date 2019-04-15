@@ -1,7 +1,7 @@
 import Pow from '../../Math/Pow';
 import ObjectFloat from '../../../Types/ObjectFloat';
 import { mathOperatorBase, mathOperatorBaseThrow } from '../__ignore__/create-operator-test';
-import { ObjectString } from '../../../types';
+import ObjectString from '../../../Types/ObjectString';
 
 describe(`Pow`, () => {
   test(`Works as a division`, () => {
