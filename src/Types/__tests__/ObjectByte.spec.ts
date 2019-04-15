@@ -24,7 +24,7 @@ describe(ObjectByte.name, () => {
   });
 
   test(`ObjectByte.prototype.toBitArray`, () => {
-    expect(new ObjectByte(0).toBitArray().equalsTo(ObjectBitArray)).toBeTruthy();
+    expect(() => new ObjectByte(0).toBitArray().equalsTo(ObjectBitArray)).toBeTruthy();
   });
 
   test(`ObjectByte.prototype.toInt`, () => {

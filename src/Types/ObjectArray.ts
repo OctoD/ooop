@@ -1,6 +1,7 @@
 import { ObjectInt, ObjectString, ObjectVoid, ObjectNull } from '../types';
 import { ConstructorOf } from './ConstructorOf';
 import TypeBase from './TypeBase';
+import ObjectFunction from './ObjectFunction';
 
 /**
  * @export
@@ -60,6 +61,16 @@ export default class ObjectArray<Z extends TypeBase> extends TypeBase<Z[]> {
     }
 
     this.size = 0;
+    
+    return new ObjectVoid();
+  }
+
+  public forEach<T extends (el: Z, index: ObjectInt, array: ObjectArray<Z>) => ObjectVoid>(fn: ObjectFunction<T>): ObjectVoid {
+    for (let i = 0; i < this.size; i++) {
+      const index = new ObjectInt(i);
+      
+      fn.call(this.item(index), index, this);
+    }
     
     return new ObjectVoid();
   }
