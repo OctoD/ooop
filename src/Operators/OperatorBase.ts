@@ -1,25 +1,26 @@
-import { TypeBase, ObjectVoid } from '../types';
+import { TypeBase, ObjectVoid, ObjectBoolean } from '../types';
 import { ConstructorOf } from '../Types/ConstructorOf';
+import InvalidLeftOperatorType from '../Errors/InvalidLeftOperatorType';
 
-export default abstract class OperatorBase {
+export default abstract class OperatorBase<LeftType extends TypeBase, RightType extends TypeBase> {
   /**
    * @protected
    * @type {TypeBase}
    * @memberof OperatorBase
    */
-  protected check: TypeBase = new ObjectVoid();
+  protected check: ConstructorOf<TypeBase> = ObjectVoid;
   /**
    * @protected
-   * @type {TypeBase}
+   * @type {LeftType}
    * @memberof Operator
    */
-  protected leftType: TypeBase = new ObjectVoid();
+  protected leftType: LeftType = new ObjectVoid() as LeftType;
   /**
    * @protected
-   * @type {TypeBase}
+   * @type {RightType}
    * @memberof Operator
    */
-  protected rightType: TypeBase = new ObjectVoid();
+  protected rightType: RightType = new ObjectVoid() as RightType;
 
   /**
    * Creates an instance of OperatorBase.
@@ -27,7 +28,7 @@ export default abstract class OperatorBase {
    * @memberof OperatorBase
    */
   public constructor(check: ConstructorOf<TypeBase>) {
-    this.check = new check(TypeBase.skipToken);
+    this.check = check;
   }
 
   /**
@@ -45,18 +46,44 @@ export default abstract class OperatorBase {
   public abstract name(): string;
 
   /**
-   * @param {TypeBase} Type
+   * @protected
+   * @returns {(void | never)}
+   * @memberof OperatorBase
+   */
+  protected typeCheckLeft(): ObjectBoolean | never {
+    if (!this.leftType.equalsTo(this.check)) {
+      throw InvalidLeftOperatorType.create(this, <any> this.leftType);
+    }
+
+    return new ObjectBoolean(true);
+  }
+
+  /**
+   * @protected
+   * @returns {(void | never)}
+   * @memberof OperatorBase
+   */
+  protected typeCheckRight(): ObjectBoolean | never {
+    if (!this.leftType.equalsTo(this.check)) {
+      throw InvalidLeftOperatorType.create(this, <any> this.leftType);
+    }
+
+    return new ObjectBoolean(true);
+  }
+
+  /**
+   * @param {LeftType} Type
    * @memberof Operator
    */
-  public left(Type: TypeBase) {
+  public left(Type: LeftType) {
     this.leftType = Type;
   }
 
   /**
-   * @param {TypeBase} Type
+   * @param {RightType} Type
    * @memberof Operator
    */
-  public right(Type: TypeBase) {
+  public right(Type: RightType) {
     this.rightType = Type;
   }
 }
