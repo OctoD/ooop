@@ -65,6 +65,12 @@ export default class ObjectArray<Z extends TypeBase> extends TypeBase<Z[]> {
     return new ObjectVoid();
   }
 
+  /**
+   * @template T
+   * @param {ObjectFunction<T>} fn
+   * @returns {ObjectVoid}
+   * @memberof ObjectArray
+   */
   public forEach<T extends (el: Z, index: ObjectInt, array: ObjectArray<Z>) => ObjectVoid>(fn: ObjectFunction<T>): ObjectVoid {
     for (let i = 0; i < this.size; i++) {
       const index = new ObjectInt(i);
