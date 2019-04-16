@@ -2,7 +2,8 @@ import ObjectNull from './ObjectNull';
 import TypeBase from './TypeBase';
 import ObjectUndefined from './ObjectUndefined';
 import ObjectInt from './ObjectInt';
-import { ObjectArray, ObjectChar } from '../types';
+import ObjectArray from './ObjectArray';
+import ObjectChar from './ObjectChar';
 
 export default class ObjectString extends TypeBase<string> {
   /**

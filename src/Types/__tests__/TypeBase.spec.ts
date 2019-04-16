@@ -1,5 +1,4 @@
 import TypeBase from '../TypeBase';
-import { ObjectString } from '../../types';
 
 describe(TypeBase.name, () => {
   it(`Is an abstract class`, () => {

@@ -1,6 +1,6 @@
 import ObjectObject from '../ObjectObject';
 import * as basetests from './__ignore__/baseTests';
-import { ObjectString } from '../../types';
+import ObjectString from '../ObjectString';
 
 describe(ObjectObject.name, () => {
   basetests.hasEqualsTo(ObjectObject);

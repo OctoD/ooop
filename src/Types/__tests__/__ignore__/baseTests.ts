@@ -1,5 +1,5 @@
 import { ConstructorOf } from '../../ConstructorOf';
-import { TypeBase } from '../../../types';
+import TypeBase from '../../TypeBase';
 
 function instance(Constructor: ConstructorOf<TypeBase>) {
   return new Constructor(TypeBase.skipToken);  

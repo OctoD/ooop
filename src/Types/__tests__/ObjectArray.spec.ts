@@ -1,7 +1,8 @@
-import { ObjectNull, ObjectString, ObjectObject } from '../../types';
 import ObjectArray from '../ObjectArray';
 import ObjectInt from '../ObjectInt';
 import * as basetests from './__ignore__/baseTests';
+import ObjectString from '../ObjectString';
+import ObjectNull from '../ObjectNull';
 
 describe(ObjectArray.name, () => {
   basetests.hasEqualsTo(ObjectArray);

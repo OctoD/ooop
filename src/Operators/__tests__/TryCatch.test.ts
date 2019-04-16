@@ -1,6 +1,6 @@
-import { ObjectFunction } from '../../types';
 import TryCatch from '../TryCatch';
 import ObjectString from '../../Types/ObjectString';
+import ObjectFunction from '../../Types/ObjectFunction';
 
 describe(`Try Catch`, () => {
   test(`it works`, () => {
