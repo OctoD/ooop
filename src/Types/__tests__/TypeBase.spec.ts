@@ -9,9 +9,4 @@ describe(TypeBase.name, () => {
     expect(typeof TypeBase.prototype.equalsTo).toBe('function');
     expect(typeof TypeBase.prototype.toString).toBe('function');
   });
-
-  it(`Can build a type with a static method`, () => {
-    expect(() => TypeBase.create(ObjectString, 'hello')).not.toThrowError();
-    expect(TypeBase.create(ObjectString, 'hello').name()).toBe(new ObjectString('').name());
-  });
 });

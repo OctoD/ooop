@@ -1,6 +1,7 @@
-import { ConstructorOf } from '../../../Types/ConstructorOf';
+import { ConstructorOf } from '../../../ConstructorOf';
+import ObjectError from '../../../ObjectError';
 
-export default function createErrorMock(ErrorConstructor: ConstructorOf<Error>) {
+export default function createErrorMock(ErrorConstructor: ConstructorOf<ObjectError>) {
   return describe(ErrorConstructor.name, () => {
     test('It can be instanced', () =>
       expect(() => new ErrorConstructor()).not.toThrowError()
@@ -34,7 +35,7 @@ export default function createErrorMock(ErrorConstructor: ConstructorOf<Error>) 
       }
       
       expect(() => (ErrorConstructor as any)['create'].apply(null, mocks as any)).not.toThrowError();
-      expect((ErrorConstructor as any)['create'].apply(null, mocks as any).name).toBe(new ErrorConstructor().name);
+      expect((ErrorConstructor as any)['create'].apply(null, mocks as any).name()).toBe(new ErrorConstructor().name());
     });
   });
 }

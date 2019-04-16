@@ -42,19 +42,6 @@ export default abstract class TypeBase<TUnderlyingType = unknown> {
   protected getUnderlyingTypeOf(arg: unknown): string {
     return Object.prototype.toString.call(arg);
   }
-
-  /**
-   * @static
-   * @template TType
-   * @template TArg
-   * @param {ConstructorOf<TType>} Type
-   * @param {TArg} arg
-   * @returns {TType}
-   * @memberof TypeBase
-   */
-  public static create<TType extends TypeBase<TArg>, TArg>(Type: ConstructorOf<TType>, arg: TArg): TType {
-    return new Type(arg);
-  }
   
   /**
    * @abstract
