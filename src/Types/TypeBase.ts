@@ -1,5 +1,6 @@
 import InvalidCastError from '../Errors/InvalidCastError';
 import { ConstructorOf } from './ConstructorOf';
+import Throw from '../Operators/Throw';
 
 export default abstract class TypeBase<TUnderlyingType = unknown> {
   /**

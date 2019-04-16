@@ -4,6 +4,8 @@ import ObjectFunction from './ObjectFunction';
 import ObjectVoid from './ObjectVoid';
 import ObjectInt from './ObjectInt';
 import ObjectNull from './ObjectNull';
+import Throw from '../Operators/Throw';
+import InvalidCastError from './Errors/InvalidCastError';
 
 /**
  * @export
