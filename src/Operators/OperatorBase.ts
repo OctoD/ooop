@@ -79,6 +79,7 @@ export default abstract class OperatorBase<LeftType extends TypeBase, RightType 
    */
   public left(Type: LeftType) {
     this.leftType = Type;
+    return this;
   }
 
   /**
@@ -87,5 +88,6 @@ export default abstract class OperatorBase<LeftType extends TypeBase, RightType 
    */
   public right(Type: RightType) {
     this.rightType = Type;
+    return this;
   }
 }
