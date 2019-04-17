@@ -16,7 +16,7 @@ export default class TryCatch extends OperatorBase<ObjectFunction<(...args: any[
     }
   }  
 
-  public catch<K>(arg: ObjectFunction<(...args: any[]) => ObjectError>) {
+  public catch(arg: ObjectFunction<(...args: any[]) => ObjectError>) {
     return this.right(arg);
   }
 

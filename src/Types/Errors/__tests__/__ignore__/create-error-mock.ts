@@ -24,10 +24,9 @@ export default function createErrorMock(ErrorConstructor: ConstructorOf<ObjectEr
     );
 
     test(`Static create will return an instance of ${ErrorConstructor.name}`, () => {
-      const mocked = {
-        name: jest.fn().mockReturnValue('a'),
-        value: jest.fn().mockReturnValue('a'),
-      };
+      const mocked = new Proxy({}, {
+        get: () => jest.fn().mockReturnValue('a'),
+      });
       const mocks = [] as any;
 
       while (mocks.length < 10) {

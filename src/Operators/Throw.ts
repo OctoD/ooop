@@ -8,14 +8,19 @@ export default class Throw extends OperatorBase<ObjectError, never> {
   }
   
   public apply(): never {
-    throw this.leftType;
+    const error = new Error();
+    // @ts-ignore
+    error.message = this.leftType.message.value();
+    error.stack = this.leftType.stack.value();
+    error.name = this.leftType.name();
+    throw error;
   }  
   
   public name(): string {
     return `[operator Throw]`;
   }
 
-  public right(... arg: any): void {
+  public right(... arg: any) {
     const op = new Throw();
     op.left(
       new ObjectError(
@@ -24,5 +29,6 @@ export default class Throw extends OperatorBase<ObjectError, never> {
     );
 
     op.apply();
+    return this;
   }
 }
