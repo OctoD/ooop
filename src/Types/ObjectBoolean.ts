@@ -1,4 +1,4 @@
-import TypeBase from './TypeBase';
+import TypeBase from '@Types/TypeBase';
 
 export default class ObjectBoolean extends TypeBase<boolean> {
   public cast<T extends TypeBase<unknown>>(type: T): TypeBase<boolean> {

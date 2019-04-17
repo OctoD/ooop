@@ -1,4 +1,4 @@
-import TypeBase from './TypeBase';
+import TypeBase from '@Types/TypeBase';
 
 export default class ObjectVoid extends TypeBase<void> {
   public constructor() {

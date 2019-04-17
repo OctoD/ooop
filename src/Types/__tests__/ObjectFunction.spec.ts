@@ -1,6 +1,6 @@
-import ObjectFunction from '../ObjectFunction';
+import ObjectFunction from '@Types/ObjectFunction';
 import * as basetests from './__ignore__/baseTests';
-import ObjectInt from '../ObjectInt';
+import ObjectInt from '@Types/ObjectInt';
 
 describe(ObjectFunction.name, () => {
   basetests.hasEqualsTo(ObjectFunction);

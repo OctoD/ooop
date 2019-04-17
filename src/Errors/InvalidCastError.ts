@@ -1,4 +1,4 @@
-import TypeBase from '../Types/TypeBase';
+import TypeBase from '@Types/TypeBase';
 
 export default class InvalidCastError extends TypeError {
   public static create(from: TypeBase, to: TypeBase) {

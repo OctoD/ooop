@@ -1,4 +1,4 @@
-import ObjectFloat from '../ObjectFloat';
+import ObjectFloat from '@Types/ObjectFloat';
 import * as basetests from './__ignore__/baseTests';
 
 describe(ObjectFloat.name, () => {

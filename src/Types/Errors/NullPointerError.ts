@@ -1,6 +1,6 @@
-import ObjectError from '../ObjectError';
-import ObjectString from '../ObjectString';
-import TypeBase from '../TypeBase';
+import ObjectError from '@Types/ObjectError';
+import ObjectString from '@Types/ObjectString';
+import TypeBase from '@Types/TypeBase';
 
 export default class NullPointerError extends ObjectError {
   public static create(key: ObjectString, caller: TypeBase): NullPointerError {

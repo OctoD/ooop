@@ -1,6 +1,6 @@
-import TryCatch from '../TryCatch';
-import ObjectString from '../../Types/ObjectString';
-import ObjectFunction from '../../Types/ObjectFunction';
+import TryCatch from '@Operators/TryCatch';
+import ObjectString from '@Types/ObjectString';
+import ObjectFunction from '@Types/ObjectFunction';
 
 describe(`Try Catch`, () => {
   test(`it works`, () => {

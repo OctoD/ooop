@@ -1,7 +1,7 @@
-import ObjectNull from './ObjectNull';
-import TypeBase from './TypeBase';
-import ObjectUndefined from './ObjectUndefined';
-import InvalidCastError from '../Errors/InvalidCastError';
+import ObjectNull from '@Types/ObjectNull';
+import TypeBase from '@Types/TypeBase';
+import ObjectUndefined from '@Types/ObjectUndefined';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
 
 export default class ObjectInt extends TypeBase<number> {
   public constructor(arg: number) {

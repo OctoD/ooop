@@ -1,10 +1,10 @@
-import OutOfRangeError from '../Errors/OutOfRangeError';
-import InvalidCastError from '../Errors/InvalidCastError';
-import ObjectBitArray from './ObjectBitArray';
-import ObjectBit from './ObjectBit';
-import TypeBase from './TypeBase';
-import ObjectInt from './ObjectInt';
-import ObjectNull from './ObjectNull';
+import OutOfRangeError from '@InternalErrors/OutOfRangeError';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
+import ObjectBitArray from '@Types/ObjectBitArray';
+import ObjectBit from '@Types/ObjectBit';
+import TypeBase from '@Types/TypeBase';
+import ObjectInt from '@Types/ObjectInt';
+import ObjectNull from '@Types/ObjectNull';
 
 export default class ObjectByte extends TypeBase<number> {
   protected readonly bit0: ObjectBit;

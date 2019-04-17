@@ -1,4 +1,4 @@
 import createErrorMock from './__ignore__/create-error-mock';
-import OutOfRangeError from '../OutOfRangeError';
+import OutOfRangeError from '@Types/Errors/OutOfRangeError';
 
 createErrorMock(OutOfRangeError);

@@ -1,11 +1,9 @@
-import { ConstructorOf } from './ConstructorOf';
-import TypeBase from './TypeBase';
-import ObjectFunction from './ObjectFunction';
-import ObjectVoid from './ObjectVoid';
-import ObjectInt from './ObjectInt';
-import ObjectNull from './ObjectNull';
-import Throw from '../Operators/Throw';
-import InvalidCastError from './Errors/InvalidCastError';
+import { ConstructorOf } from '@Types/ConstructorOf';
+import TypeBase from '@Types/TypeBase';
+import ObjectFunction from '@Types/ObjectFunction';
+import ObjectVoid from '@Types/ObjectVoid';
+import ObjectInt from '@Types/ObjectInt';
+import ObjectNull from '@Types/ObjectNull';
 
 /**
  * @export

@@ -1,7 +1,7 @@
 import OperatorBase from './OperatorBase';
-import ObjectVariable from '../Types/ObjectVariable';
-import ObjectString from '../Types/ObjectString';
-import TypeBase from '../Types/TypeBase';
+import ObjectVariable from '@Types/ObjectVariable';
+import ObjectString from '@Types/ObjectString';
+import TypeBase from '@Types/TypeBase';
 
 export default class Assign extends OperatorBase<ObjectString, TypeBase> {
   public constructor() {

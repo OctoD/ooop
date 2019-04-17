@@ -1,5 +1,5 @@
-import { ObjectInt } from '../types';
-import ObjectFloat from '../Types/ObjectFloat';
+import ObjectFloat from '@Types/ObjectFloat';
+import ObjectInt from '@Types/ObjectInt';
 
 export default class OutOfRangeError extends TypeError {
   public static create(min: ObjectFloat | ObjectInt, max: ObjectFloat | ObjectInt) {

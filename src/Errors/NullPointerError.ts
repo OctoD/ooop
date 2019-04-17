@@ -1,5 +1,5 @@
-import TypeBase from '../Types/TypeBase';
-import ObjectString from '../Types/ObjectString';
+import TypeBase from '@Types/TypeBase';
+import ObjectString from '@Types/ObjectString';
 
 export default class NullPointerError extends Error {
   public static create(key: ObjectString, caller: TypeBase): NullPointerError {

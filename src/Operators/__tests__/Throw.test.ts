@@ -1,5 +1,5 @@
-import Throw from '../Throw';
-import ObjectError from '../../Types/ObjectError';
+import Throw from '@Operators/Throw';
+import ObjectError from '@Types/ObjectError';
 
 describe(`throw`, () => {
   test(`it works`, () => {

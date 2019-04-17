@@ -1,8 +1,8 @@
-import ObjectBoolean from './ObjectBoolean';
-import ObjectNull from './ObjectNull';
-import ObjectUndefined from './ObjectUndefined';
-import TypeBase from './TypeBase';
-import InvalidCastError from '../Errors/InvalidCastError';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
+import ObjectBoolean from '@Types/ObjectBoolean';
+import ObjectNull from '@Types/ObjectNull';
+import ObjectUndefined from '@Types/ObjectUndefined';
+import TypeBase from '@Types/TypeBase';
 
 export default class ObjectBit extends TypeBase<0 | 1> {
   public constructor(bit: 0 | 1) {

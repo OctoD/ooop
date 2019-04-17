@@ -1,7 +1,7 @@
-import Divide from '../../Math/Divide';
+import Divide from '@Operators/Math/Divide';
 import { mathOperatorBase, mathOperatorBaseThrow } from '../__ignore__/create-operator-test';
-import ObjectFloat from '../../../Types/ObjectFloat';
-import ObjectString from '../../../Types/ObjectString';
+import ObjectFloat from '@Types/ObjectFloat';
+import ObjectString from '@Types/ObjectString';
 
 describe(`Divide`, () => {
   test(`Works as a division`, () => {

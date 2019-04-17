@@ -1,7 +1,7 @@
-import TypeBase from './TypeBase';
-import ObjectNull from './ObjectNull';
-import ObjectUndefined from './ObjectUndefined';
-import InvalidCastError from '../Errors/InvalidCastError';
+import ObjectNull from '@Types/ObjectNull';
+import ObjectUndefined from '@Types/ObjectUndefined';
+import TypeBase from '@Types/TypeBase';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
 
 export default class ObjectDecimal extends TypeBase<number> {
   public constructor (arg: number) {

@@ -1,7 +1,7 @@
-import ObjectByte from '../ObjectByte';
+import ObjectByte from '@Types/ObjectByte';
 import * as basetests from './__ignore__/baseTests';
-import ObjectInt from '../ObjectInt';
-import ObjectBitArray from '../ObjectBitArray';
+import ObjectInt from '@Types/ObjectInt';
+import ObjectBitArray from '@Types/ObjectBitArray';
 
 describe(ObjectByte.name, () => {
   basetests.hasEqualsTo(ObjectByte);

@@ -35,6 +35,21 @@
     "outDir": "dist",
     "strict": true,
     "target": "es5",
+    "baseUrl": "./src",
+    "paths": {
+      "@InternalErrors/*": [
+        "Errors/*"
+      ],
+      "@Operators/*": [
+        "Operators/*"
+      ],
+      "@Reflection/*": [
+        "Reflection/*"
+      ],
+      "@Types/*": [
+        "Types/*"
+      ],
+    }
   },
   "exclude": [
     "dist",

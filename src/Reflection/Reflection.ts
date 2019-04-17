@@ -1,7 +1,7 @@
-import { ConstructorOf } from '../Types/ConstructorOf';
-import TypeBase from '../Types/TypeBase';
-import ObjectVoid from '../Types/ObjectVoid';
-import ObjectString from '../Types/ObjectString';
+import { ConstructorOf } from '@Types/ConstructorOf';
+import TypeBase from '@Types/TypeBase';
+import ObjectVoid from '@Types/ObjectVoid';
+import ObjectString from '@Types/ObjectString';
 
 export function construct<T extends TypeBase<K>, K>(Type: ConstructorOf<T>, args: K): T {
   return new Type(args);

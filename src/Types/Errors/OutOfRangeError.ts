@@ -1,7 +1,7 @@
-import ObjectError from '../ObjectError';
-import ObjectFloat from '../ObjectFloat';
-import ObjectInt from '../ObjectInt';
-import ObjectString from '../ObjectString';
+import ObjectError from '@Types/ObjectError';
+import ObjectFloat from '@Types/ObjectFloat';
+import ObjectInt from '@Types/ObjectInt';
+import ObjectString from '@Types/ObjectString';
 
 export default class OutOfRangeError extends ObjectError {
   public static create(min: ObjectFloat | ObjectInt, max: ObjectFloat | ObjectInt) {

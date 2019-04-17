@@ -1,6 +1,6 @@
-import OperatorBase from './OperatorBase';
-import ObjectError from '../Types/ObjectError';
-import ObjectString from '../Types/ObjectString';
+import OperatorBase from '@Operators/OperatorBase';
+import ObjectError from '@Types/ObjectError';
+import ObjectString from '@Types/ObjectString';
 
 export default class Throw extends OperatorBase<ObjectError, never> {
   public constructor() {

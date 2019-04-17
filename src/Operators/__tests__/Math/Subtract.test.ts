@@ -1,7 +1,7 @@
-import Subtract from '../../Math/Subtract';
-import ObjectFloat from '../../../Types/ObjectFloat';
+import Subtract from '@Operators/Math/Subtract';
+import ObjectFloat from '@Types/ObjectFloat';
 import { mathOperatorBase, mathOperatorBaseThrow } from '../__ignore__/create-operator-test';
-import ObjectString from '../../../Types/ObjectString';
+import ObjectString from '@Types/ObjectString';
 
 describe(`Subtract`, () => {
   test(`Works as a division`, () => {

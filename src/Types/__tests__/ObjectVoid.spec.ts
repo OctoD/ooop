@@ -1,4 +1,4 @@
-import ObjectVoid from '../ObjectVoid';
+import ObjectVoid from '@Types/ObjectVoid';
 import * as basetests from './__ignore__/baseTests';
 
 describe(ObjectVoid.name, () => {

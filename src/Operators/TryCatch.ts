@@ -1,7 +1,7 @@
-import OperatorBase from './OperatorBase';
-import ObjectFunction from '../Types/ObjectFunction';
-import TypeBase from '../Types/TypeBase';
-import ObjectError from '../Types/ObjectError';
+import OperatorBase from '@Operators/OperatorBase';
+import ObjectFunction from '@Types/ObjectFunction';
+import TypeBase from '@Types/TypeBase';
+import ObjectError from '@Types/ObjectError';
 
 export default class TryCatch extends OperatorBase<ObjectFunction<(...args: any[]) => TypeBase>, ObjectFunction<(...args: any[]) => ObjectError>> {
   public constructor() {

@@ -1,10 +1,10 @@
-import TypeBase from '../TypeBase';
-import ObjectArray from '../ObjectArray';
-import FunctionExecutionStatement from './FunctionExecutionStatement';
-import ObjectInt from '../ObjectInt';
-import GreaterThan from '../../Operators/Math/GreaterThan';
-import Sum from '../../Operators/Math/Sum';
-import ObjectNull from '../ObjectNull';
+import GreaterThan from '@Operators/Math/GreaterThan';
+import Sum from '@Operators/Math/Sum';
+import TypeBase from '@Types/TypeBase';
+import ObjectArray from '@Types/ObjectArray';
+import FunctionExecutionStatement from '@Types/Function/FunctionExecutionStatement';
+import ObjectInt from '@Types/ObjectInt';
+import ObjectNull from '@Types/ObjectNull';
 
 export default class FunctionExecutionBody<T> extends TypeBase<TypeBase<T>> {
   protected currentStatement: FunctionExecutionStatement | ObjectNull = new ObjectNull();

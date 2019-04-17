@@ -1,5 +1,5 @@
-import ObjectArray from './ObjectArray';
-import ObjectBit from './ObjectBit';
+import ObjectArray from '@Types/ObjectArray';
+import ObjectBit from '@Types/ObjectBit';
 
 export default class ObjectBitArray extends ObjectArray<ObjectBit> {
   public constructor () {

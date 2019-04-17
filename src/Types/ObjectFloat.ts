@@ -1,7 +1,7 @@
-import TypeBase from './TypeBase';
-import ObjectNull from './ObjectNull';
-import ObjectUndefined from './ObjectUndefined';
-import InvalidCastError from '../Errors/InvalidCastError';
+import TypeBase from '@Types/TypeBase';
+import ObjectNull from '@Types/ObjectNull';
+import ObjectUndefined from '@Types/ObjectUndefined';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
 
 export default class ObjectFloat extends TypeBase<number> {
   public constructor (arg: number) {

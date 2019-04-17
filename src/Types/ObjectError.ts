@@ -1,7 +1,7 @@
-import TypeBase from './TypeBase';
-import InvalidCastError from '../Errors/InvalidCastError';
-import ObjectString from './ObjectString';
-import Throw from '../Operators/Throw';
+import TypeBase from '@Types/TypeBase';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
+import ObjectString from '@Types/ObjectString';
+import Throw from '@Operators/Throw';
 
 export default class ObjectError extends TypeBase<never> {
   public message: ObjectString;

@@ -1,5 +1,5 @@
-import TypeBase from './TypeBase';
-import InvalidCastError from '../Errors/InvalidCastError';
+import TypeBase from '@Types/TypeBase';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
 
 export default class ObjectNull extends TypeBase<null> {
   public constructor() {

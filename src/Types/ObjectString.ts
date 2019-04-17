@@ -1,9 +1,9 @@
-import ObjectNull from './ObjectNull';
-import TypeBase from './TypeBase';
-import ObjectUndefined from './ObjectUndefined';
-import ObjectInt from './ObjectInt';
-import ObjectArray from './ObjectArray';
-import ObjectChar from './ObjectChar';
+import ObjectNull from '@Types/ObjectNull';
+import TypeBase from '@Types/TypeBase';
+import ObjectUndefined from '@Types/ObjectUndefined';
+import ObjectInt from '@Types/ObjectInt';
+import ObjectArray from '@Types/ObjectArray';
+import ObjectChar from '@Types/ObjectChar';
 
 export default class ObjectString extends TypeBase<string> {
   /**

@@ -1,4 +1,4 @@
-import ObjectInt from '../ObjectInt';
+import ObjectInt from '@Types/ObjectInt';
 import * as basetests from './__ignore__/baseTests';
 
 describe(ObjectInt.name, () => {

@@ -1,7 +1,7 @@
-import * as Reflection from '..';
-import ObjectString from '../../Types/ObjectString';
-import ObjectArray from '../../Types/ObjectArray';
-import ObjectObject from '../../Types/ObjectObject';
+import * as Reflection from '@Reflection/Reflection';
+import ObjectString from '@Types/ObjectString';
+import ObjectArray from '@Types/ObjectArray';
+import ObjectObject from '@Types/ObjectObject';
 
 describe(`reflection`, () => {
   test(`construct`, () => {

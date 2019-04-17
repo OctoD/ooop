@@ -1,4 +1,4 @@
-import ObjectBoolean from '../ObjectBoolean';
+import ObjectBoolean from '@Types/ObjectBoolean';
 import * as basetests from './__ignore__/baseTests';
 
 describe(ObjectBoolean.name, () => {

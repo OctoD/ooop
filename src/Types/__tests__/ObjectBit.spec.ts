@@ -1,10 +1,10 @@
-import ObjectBit from '../ObjectBit';
+import ObjectBit from '@Types/ObjectBit';
 import * as basetests from './__ignore__/baseTests';
-import ObjectBoolean from '../ObjectBoolean';
-import ObjectString from '../ObjectString';
-import ObjectNull from '../ObjectNull';
-import ObjectUndefined from '../ObjectUndefined';
-import ObjectInt from '../ObjectInt';
+import ObjectBoolean from '@Types/ObjectBoolean';
+import ObjectString from '@Types/ObjectString';
+import ObjectNull from '@Types/ObjectNull';
+import ObjectUndefined from '@Types/ObjectUndefined';
+import ObjectInt from '@Types/ObjectInt';
 
 describe(ObjectBit.name, () => {
   basetests.hasEqualsTo(ObjectBit);

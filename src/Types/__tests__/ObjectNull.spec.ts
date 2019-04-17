@@ -1,4 +1,4 @@
-import ObjectNull from '../ObjectNull';
+import ObjectNull from '@Types/ObjectNull';
 import * as basetests from './__ignore__/baseTests';
 
 describe(ObjectNull.name, () => {

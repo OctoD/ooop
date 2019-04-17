@@ -1,7 +1,7 @@
-import { ConstructorOf } from './ConstructorOf';
-import InvalidCastError from '../Errors/InvalidCastError';
-import TypeBase from './TypeBase';
-import ObjectString from './ObjectString';
+import { ConstructorOf } from '@Types/ConstructorOf';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
+import TypeBase from '@Types/TypeBase';
+import ObjectString from '@Types/ObjectString';
 
 export default class ObjectVariable<TValue extends TypeBase = TypeBase> extends TypeBase<TValue> {
   private TypeChecker: ConstructorOf<TValue>;

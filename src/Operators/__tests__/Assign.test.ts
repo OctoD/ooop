@@ -1,7 +1,7 @@
-import Assign from '../Assign';
-import ObjectString from '../../Types/ObjectString';
-import ObjectVariable from '../../Types/ObjectVariable';
-import ObjectInt from '../../Types/ObjectInt';
+import Assign from '@Operators/Assign';
+import ObjectString from '@Types/ObjectString';
+import ObjectVariable from '@Types/ObjectVariable';
+import ObjectInt from '@Types/ObjectInt';
 
 describe(`Assign`, () => {
   test(`Can assign a value`, () => {

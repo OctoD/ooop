@@ -1,4 +1,4 @@
-import ObjectUndefined from '../ObjectUndefined';
+import ObjectUndefined from '@Types/ObjectUndefined';
 import * as basetests from './__ignore__/baseTests';
 
 describe(ObjectUndefined.name, () => {

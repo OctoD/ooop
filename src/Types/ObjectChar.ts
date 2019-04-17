@@ -1,7 +1,7 @@
-import InvalidCastError from '../Errors/InvalidCastError';
-import ObjectInt from './ObjectInt';
-import ObjectString from './ObjectString';
-import TypeBase from './TypeBase';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
+import ObjectInt from '@Types/ObjectInt';
+import ObjectString from '@Types/ObjectString';
+import TypeBase from '@Types/TypeBase';
 
 export default class ObjectChar extends TypeBase<string> {
   /**

@@ -23,6 +23,12 @@ module.exports = {
     "json",
     "node"
   ],
+  moduleNameMapper: {
+    "@InternalErrors/(.*)": "<rootDir>/src/Errors/$1",
+    "@Reflection/(.*)": "<rootDir>/src/Reflection/$1",
+    "@Operators/(.*)": "<rootDir>/src/Operators/$1",
+    "@Types/(.*)": "<rootDir>/src/Types/$1",
+  },
   roots: [
     "src/"
   ],

@@ -1,5 +1,5 @@
-import InvalidCastError from '../Errors/InvalidCastError';
-import TypeBase from './TypeBase';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
+import TypeBase from '@Types/TypeBase';
 
 export default class ObjectFunction<TFunction extends (... args: any[]) => TypeBase> extends TypeBase<TFunction> {
   public cast<T extends TypeBase<unknown>>(type: T): TypeBase<TFunction> {

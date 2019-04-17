@@ -1,6 +1,6 @@
-import ObjectError from '../ObjectError';
-import TypeBase from '../TypeBase';
-import ObjectString from '../ObjectString';
+import ObjectError from '@Types/ObjectError';
+import TypeBase from '@Types/TypeBase';
+import ObjectString from '@Types/ObjectString';
 
 export default class InvalidCastError extends ObjectError {
   public static create(from: TypeBase, to: TypeBase) {

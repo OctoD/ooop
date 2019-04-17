@@ -1,4 +1,4 @@
-import TypeBase from './TypeBase';
+import TypeBase from '@Types/TypeBase';
 
 export default class ObjectUndefined extends TypeBase<undefined> {
   public constructor() {

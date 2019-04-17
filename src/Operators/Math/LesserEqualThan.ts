@@ -1,6 +1,6 @@
-import ObjectBoolean from '../../Types/ObjectBoolean';
-import ObjectFloat from '../../Types/ObjectFloat';
-import OperatorBase from '../OperatorBase';
+import ObjectBoolean from '@Types/ObjectBoolean';
+import ObjectFloat from '@Types/ObjectFloat';
+import OperatorBase from '@Operators/OperatorBase';
 
 export default class LesserThan extends OperatorBase<ObjectFloat, ObjectFloat> {
   public constructor () {

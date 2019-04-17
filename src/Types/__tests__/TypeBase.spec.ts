@@ -1,4 +1,4 @@
-import TypeBase from '../TypeBase';
+import TypeBase from '@Types/TypeBase';
 
 describe(TypeBase.name, () => {
   it(`Is an abstract class`, () => {

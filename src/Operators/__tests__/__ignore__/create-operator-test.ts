@@ -1,6 +1,6 @@
-import OperatorBase from '../../OperatorBase';
-import { ConstructorOf } from '../../../Types/ConstructorOf';
-import TypeBase from '../../../Types/TypeBase';
+import OperatorBase from '@Operators/OperatorBase';
+import { ConstructorOf } from '@Types/ConstructorOf';
+import TypeBase from '@Types/TypeBase';
 
 export function mathOperatorBase<L extends TypeBase<number>, R extends TypeBase<number>>(
   Operator: ConstructorOf<OperatorBase<L, R>>, 

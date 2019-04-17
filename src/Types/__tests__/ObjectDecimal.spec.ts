@@ -1,6 +1,6 @@
-import ObjectDecimal from '../ObjectDecimal';
+import ObjectDecimal from '@Types/ObjectDecimal';
 import * as basetests from './__ignore__/baseTests';
-import ObjectInt from '../ObjectInt';
+import ObjectInt from '@Types/ObjectInt';
 
 describe(ObjectDecimal.name, () => {
   basetests.hasEqualsTo(ObjectDecimal);

@@ -1,6 +1,6 @@
-import OperatorBase from '../OperatorBase';
-import ObjectFloat from '../../Types/ObjectFloat';
-import OperationError from '../../Errors/OperationError';
+import OperatorBase from '@Operators/OperatorBase';
+import ObjectFloat from '@Types/ObjectFloat';
+import OperationError from '@InternalErrors/OperationError';
 
 export default class Pow extends OperatorBase<ObjectFloat, ObjectFloat> {
   /**

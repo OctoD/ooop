@@ -1,7 +1,7 @@
-import InvalidCastError from '../Errors/InvalidCastError';
-import TypeBase from './TypeBase';
-import ObjectUndefined from './ObjectUndefined';
-import ObjectNull from './ObjectNull';
+import InvalidCastError from '@InternalErrors/InvalidCastError';
+import TypeBase from '@Types/TypeBase';
+import ObjectUndefined from '@Types/ObjectUndefined';
+import ObjectNull from '@Types/ObjectNull';
 
 export default class ObjectObject extends TypeBase<object> {
   [index: string]: TypeBase 
